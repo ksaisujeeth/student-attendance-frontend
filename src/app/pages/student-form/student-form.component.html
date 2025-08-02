@@ -1,0 +1,159 @@
+<div class="container mt-4">
+  <!-- Page Header -->
+  <div class="row mb-4">
+    <div class="col-md-8">
+      <h2>{{ isEditMode ? 'Edit Student' : 'Add New Student' }}</h2>
+    </div>
+    <div class="col-md-4 text-end">
+      <button class="btn btn-secondary" (click)="goBack()">
+        <i class="fas fa-arrow-left"></i> Back to Students
+      </button>
+    </div>
+  </div>
+
+  <!-- Loading Message -->
+  <div *ngIf="loading" class="text-center mb-4">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p>{{ isEditMode ? 'Loading student details...' : 'Saving student...' }}</p>
+  </div>
+
+  <!-- Success Message -->
+  <div *ngIf="successMessage" class="alert alert-success alert-dismissible">
+    <i class="fas fa-check-circle"></i> {{ successMessage }}
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="alert alert-danger alert-dismissible">
+    <i class="fas fa-exclamation-circle"></i> {{ errorMessage }}
+  </div>
+
+  <!-- Student Form -->
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">
+        <i class="fas fa-user-plus"></i> Student Information
+      </h5>
+    </div>
+    <div class="card-body">
+      <form #studentForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+        
+        <!-- Student Name -->
+        <div class="mb-3">
+          <label for="studentName" class="form-label">
+            <i class="fas fa-user"></i> Student Name *
+          </label>
+          <input 
+            type="text" 
+            class="form-control"
+            [class.is-invalid]="formErrors.studentName"
+            id="studentName"
+            name="studentName"
+            [(ngModel)]="student.studentName"
+            placeholder="Enter student's full name"
+            maxlength="100">
+          <div *ngIf="formErrors.studentName" class="invalid-feedback">
+            {{ formErrors.studentName }}
+          </div>
+        </div>
+
+        <!-- Student Class -->
+        <div class="mb-3">
+          <label for="studentClass" class="form-label">
+            <i class="fas fa-graduation-cap"></i> Class *
+          </label>
+          <select 
+            class="form-select"
+            [class.is-invalid]="formErrors.studentClass"
+            id="studentClass"
+            name="studentClass"
+            [(ngModel)]="student.studentClass">
+            <option value="">Select Class</option>
+            <option value="1st">1st Class</option>
+            <option value="2nd">2nd Class</option>
+            <option value="3rd">3rd Class</option>
+            <option value="4th">4th Class</option>
+            <option value="5th">5th Class</option>
+            <option value="6th">6th Class</option>
+            <option value="7th">7th Class</option>
+            <option value="8th">8th Class</option>
+            <option value="9th">9th Class</option>
+            <option value="10th">10th Class</option>
+            <option value="11th">11th Class</option>
+            <option value="12th">12th Class</option>
+          </select>
+          <div *ngIf="formErrors.studentClass" class="invalid-feedback">
+            {{ formErrors.studentClass }}
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="mb-4">
+          <label class="form-label">
+            <i class="fas fa-venus-mars"></i> Gender *
+          </label>
+          <div class="form-check-container">
+            <div class="form-check form-check-inline">
+              <input 
+                class="form-check-input" 
+                [class.is-invalid]="formErrors.studentGender"
+                type="radio" 
+                name="studentGender" 
+                id="male" 
+                value="M"
+                [(ngModel)]="student.studentGender">
+              <label class="form-check-label" for="male">
+                <i class="fas fa-mars text-primary"></i> Male
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input 
+                class="form-check-input"
+                [class.is-invalid]="formErrors.studentGender" 
+                type="radio" 
+                name="studentGender" 
+                id="female" 
+                value="F"
+                [(ngModel)]="student.studentGender">
+              <label class="form-check-label" for="female">
+                <i class="fas fa-venus text-danger"></i> Female
+              </label>
+            </div>
+          </div>
+          <div *ngIf="formErrors.studentGender" class="text-danger mt-1">
+            <small>{{ formErrors.studentGender }}</small>
+          </div>
+        </div>
+
+        <!-- Form Buttons -->
+        <div class="d-flex justify-content-between">
+          <div>
+            <button 
+              type="submit" 
+              class="btn btn-primary me-2"
+              [disabled]="loading">
+              <i class="fas fa-save"></i> 
+              {{ isEditMode ? 'Update Student' : 'Add Student' }}
+            </button>
+            <button 
+              type="button" 
+              class="btn btn-warning"
+              (click)="resetForm()"
+              [disabled]="loading">
+              <i class="fas fa-undo"></i> Reset Form
+            </button>
+          </div>
+          <button 
+            type="button" 
+            class="btn btn-secondary"
+            (click)="goBack()"
+            [disabled]="loading">
+            <i class="fas fa-times"></i> Cancel
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.container {
+  max-width: 1200px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.btn {
+  border-radius: 5px;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.btn-sm {
+  font-size: 0.8rem;
+}
+
+h2 {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.alert {
+  border-radius: 8px;
+}

@@ -1,59 +1,58 @@
-# StudentAttendanceApp
+Steps I have done:
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+cd StudentAttendanceFrontend
+ng new student-attendance-app
+cd student-attendance-app
 
-## Development server
+mkdir src/app/models
+mkdir src/app/services
+mkdir src/app/components
+mkdir src/app/pages
+mkdir src/app/shared
 
-To start a local development server, run:
+mkdir src/app/components/student
+mkdir src/app/components/attendance
+mkdir src/app/components/header
+mkdir src/app/components/sidebar
+mkdir src/app/shared/components
 
-```bash
-ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+mkdir src/app/pages/student-list
+mkdir src/app/pages/student-form
+mkdir src/app/pages/attendance-list
+mkdir src/app/pages/attendance-form
+mkdir src/app/pages/dashboard
+mkdir src/app/pages/reports
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+mkdir src/app/services/student
+mkdir src/app/services/attendance
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Models -->
+    attendance.model
+    error-response.model
+    student.model
+Services-->
+    attendance.service
+    student.service
+pages:
+    student-list
+    student-form
+    attendance-list
+    attendance-form
+    dashboards
+    reports
 
-```bash
-ng generate --help
-```
+app:
+    app.routes.ts
+    app.component.ts
+    app.component.html
+    app.component.css
 
-## Building
+npm install bootstrap@5.3.0
 
-To build the project run:
+style.css
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

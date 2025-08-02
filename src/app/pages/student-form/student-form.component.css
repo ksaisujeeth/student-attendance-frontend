@@ -1,0 +1,111 @@
+.container {
+  max-width: 800px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.card-header {
+  border-radius: 10px 10px 0 0 !important;
+  padding: 1rem 1.5rem;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-control.is-invalid, .form-select.is-invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-check-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.form-check-inline {
+  margin-right: 0;
+}
+
+.form-check-input {
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.form-check-label {
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.form-check-label:hover {
+  background-color: #f8f9fa;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.alert {
+  border-radius: 8px;
+  border: none;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+
+h2 {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.invalid-feedback {
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.text-danger small {
+  font-size: 0.9rem;
+}
+
+/* Icons spacing */
+.fas {
+  margin-right: 0.5rem;
+}

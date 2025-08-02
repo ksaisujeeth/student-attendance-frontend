@@ -1,0 +1,51 @@
+.container {
+  max-width: 900px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  border: none;
+}
+
+.card-header {
+  border-radius: 10px 10px 0 0 !important;
+  padding: 1rem 1.3rem;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #2471a3;
+}
+
+.btn {
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+h2, h5 {
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.alert {
+  border-radius: 8px;
+  border: none;
+  padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.list-group-item {
+  border: none;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+}
+
+.spinner-border {
+  width: 2.5rem;
+  height: 2.5rem;
+}

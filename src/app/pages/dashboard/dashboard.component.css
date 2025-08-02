@@ -1,0 +1,47 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px 12px;
+}
+
+.dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 36px;
+  color: #2c3e50;
+  text-align: left;
+}
+
+.dashboard-card {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 5px 15px rgba(44,62,80,0.10), 0 2px 4px #1976d242;
+  transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 22px rgba(44,62,80,0.15);
+}
+
+.card-body {
+  padding: 2rem 1rem;
+}
+
+.card-body h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 16px 0 8px 0;
+}
+
+.card-text {
+  font-size: 1.2rem;
+}
+
+.btn {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}

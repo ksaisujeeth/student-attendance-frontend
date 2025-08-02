@@ -1,0 +1,45 @@
+<div class="dashboard-container">
+  <h2 class="dashboard-title">Dashboard</h2>
+
+  <div *ngIf="loading" class="text-center mt-4">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p>Loading dashboard...</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger my-4">{{ errorMessage }}</div>
+
+  <div class="row mt-2" *ngIf="!loading && !errorMessage">
+    <div class="col-md-4 mb-4">
+      <div class="card dashboard-card bg-primary text-white">
+        <div class="card-body text-center">
+          <i class="fas fa-users fa-2x"></i>
+          <h3>{{ totalStudents }}</h3>
+          <p class="card-text">Total Students</p>
+          <button class="btn btn-light btn-sm mt-2" (click)="gotoStudents()">View Students</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card dashboard-card bg-success text-white">
+        <div class="card-body text-center">
+          <i class="fas fa-user-check fa-2x"></i>
+          <h3>{{ todaysPresentCount }}</h3>
+          <p class="card-text">Present Today</p>
+          <button class="btn btn-light btn-sm mt-2" (click)="gotoAttendance()">View Attendance</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card dashboard-card bg-danger text-white">
+        <div class="card-body text-center">
+          <i class="fas fa-user-times fa-2x"></i>
+          <h3>{{ todaysAbsentCount }}</h3>
+          <p class="card-text">Absent Today</p>
+          <button class="btn btn-light btn-sm mt-2" (click)="gotoReports()">Reports</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

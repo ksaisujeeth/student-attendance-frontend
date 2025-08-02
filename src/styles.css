@@ -1,1 +1,12 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+}
 /* You can add global styles to this file, and also import other style files */
