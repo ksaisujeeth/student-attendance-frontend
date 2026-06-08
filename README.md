@@ -60,6 +60,14 @@ dir (should see some files like angular.json)
 npm install
 ng serve
 
+Git Commands:
+git status
+git add .
+git commit -m "Message"
+git branch
+git push origin main (If you are in main)
+git push origin master (If you are in master)
+
 ```
 
 
