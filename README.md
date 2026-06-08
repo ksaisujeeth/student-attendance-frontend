@@ -54,5 +54,10 @@ npm install bootstrap@5.3.0
 
 style.css
 
+cd D:\saisujeeth\SpringBootPractice\StudentAttendanceFrontend\student-attendance-app (front end folder path)
+dir (should see some files like angular.json)
+npm install
+ng serve
+
 
 
