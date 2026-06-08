@@ -1,3 +1,4 @@
+```text
 Steps I have done:
 
 cd StudentAttendanceFrontend
@@ -59,5 +60,6 @@ dir (should see some files like angular.json)
 npm install
 ng serve
 
+```
 
 
